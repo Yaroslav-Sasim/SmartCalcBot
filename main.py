@@ -6,7 +6,6 @@ from telebot import types
 from fractions import Fraction
 import math
 import re
-from replit import db  # <-- Replit DB
 
 # Токен бота
 BOT_TOKEN = os.environ['BOT_TOKEN']
@@ -14,10 +13,6 @@ ADMIN_ID = os.environ.get('ADMIN_ID')
 
 print("ADMIN_ID:", ADMIN_ID)
 bot = telebot.TeleBot(BOT_TOKEN)
-
-# --- Инициализация списка пользователей в DB ---
-if "users" not in db:
-    db["users"] = []
 
 
 # --- Главное меню ---
